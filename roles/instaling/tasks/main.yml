@@ -1,0 +1,30 @@
+- name: Install base packages (debian)
+  when: ansible_distribution == 'Debian'
+  apt: name={{ item }} state=latest
+  with_items:
+  - apt-transport-https
+  - traceroute
+  - fping
+  - curl
+  - gpgv
+  - vim
+  - git
+  - mosh
+- name: Install base packages (freebsd)
+  when: ansible_distribution == 'FreeBSD'
+  pkgng: name={{ item }} state=present
+  with_items:
+  - bash
+  - python
+  - traceroute
+  - fping
+  - curl
+  - gnupg
+  - vim-lite
+  - git
+  - base64
+  - mosh
+- name: Clone /root/bin
+  git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
+- name: Linking /root/bin
+  lineinfile: dest=/root/.bashrc regexp=~/bin line="export PATH=~/bin:$PATH" create=yes

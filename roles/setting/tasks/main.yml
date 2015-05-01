@@ -1,0 +1,13 @@
+- name: Paste sources.list
+  when: ansible_distribution == 'Debian'
+  template: src=sources.list_debian dest=/etc/apt/sources.list
+- name: Add GPG keys
+  when: ansible_distribution == 'Debian'
+  # phusionpassenger
+  apt_key: state=present keyserver=keyserver.ubuntu.com id=561F9B9CAC40B2F7
+  # openvpn
+  apt_key: state=present keyserver=keyserver.ubuntu.com id=8E6DA8B4E158C569
+  # knot-dns
+  apt_key: state=present keyserver=keyserver.ubuntu.com id=AC0E47584A7A714D
+  # newrelic
+  apt_key: state=present keyserver=keyserver.ubuntu.com id=548C16BF
