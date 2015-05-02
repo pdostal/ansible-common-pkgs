@@ -1,4 +1,4 @@
-- name: Install base packages (debian)
+- name: Install base packages (Debian)
   when: ansible_distribution == 'Debian'
   apt: name={{ item }} state=latest
   with_items:
@@ -11,7 +11,17 @@
   - git
   - mosh
   - mutt
-- name: Install base packages (freebsd)
+- name: Install base packages (CentOS)
+  when: ansible_distribution == 'CentOS'
+  yum: name={{ item }} state=latest
+  with_items:
+  - traceroute
+  - curl
+  - gpg
+  - vim
+  - git
+  - mutt
+- name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
   with_items:
