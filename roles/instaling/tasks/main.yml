@@ -10,6 +10,7 @@
   - vim
   - git
   - mosh
+  - mutt
 - name: Install base packages (freebsd)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
@@ -24,6 +25,7 @@
   - git
   - base64
   - mosh
+  - mutt
 - name: Clone /root/bin
   git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
 - name: Linking /root/bin
