@@ -21,6 +21,7 @@
   - vim
   - git
   - mutt
+  - gcc
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
