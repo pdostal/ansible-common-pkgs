@@ -11,6 +11,7 @@
   - git
   - mosh
   - mutt
+  - htop
 - name: Install base packages (CentOS)
   when: ansible_distribution == 'CentOS'
   yum: name={{ item }} state=latest
@@ -22,6 +23,7 @@
   - git
   - mutt
   - gcc
+  - htop
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
