@@ -1,18 +1,18 @@
 # standard
-deb http://mirrors.digitalocean.com/debian wheezy main
-deb http://mirrors.digitalocean.com/debian wheezy-updates main
+deb http://mirrors.digitalocean.com/debian jessie main
+deb http://mirrors.digitalocean.com/debian jessie-updates main
 
 # backports
-deb http://mirrors.digitalocean.com/debian wheezy-backports main
+deb http://mirrors.digitalocean.com/debian jessie-backports main
 
 # security
-deb http://security.debian.org/ wheezy/updates main
+deb http://security.debian.org/ jessie/updates main
 
 # phusionpassenger
 deb https://oss-binaries.phusionpassenger.com/apt/passenger wheezy main
 # openvpn
 deb http://swupdate.openvpn.net/apt wheezy main
 # knot-dns
-deb http://deb.knot-dns.cz/debian/ wheezy main
+deb http://deb.knot-dns.cz/debian/ jessie main
 # newrelic
 deb http://apt.newrelic.com/debian/ newrelic non-free
