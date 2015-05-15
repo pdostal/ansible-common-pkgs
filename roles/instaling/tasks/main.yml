@@ -24,6 +24,7 @@
   - mutt
   - gcc
   - htop
+  - mosh
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
