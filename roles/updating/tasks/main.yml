@@ -10,7 +10,7 @@
 
 - name: Upgrade all packages [Debian]
   when: ansible_os_family == 'Debian'
-  apt: upgrade=dist
+  apt: upgrade=dist force=yes
 - name: Upgrade all packages [RedHat]
   when: ansible_os_family == 'RedHat'
   yum: name=* state=latest
