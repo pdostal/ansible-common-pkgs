@@ -12,6 +12,8 @@
   - mosh
   - mutt
   - htop
+  - zip
+  - unzip
 - name: Install base packages (CentOS)
   when: ansible_distribution == 'CentOS'
   yum: name={{ item }} state=latest
