@@ -4,10 +4,12 @@
 - name: Add GPG keys
   when: ansible_distribution == 'Debian'
   # phusionpassenger
-  apt_key: state=present keyserver=keyserver.ubuntu.com id=561F9B9CAC40B2F7
+  apt_key: state=present keyserver=pgpkeys.mit.edu id=561F9B9CAC40B2F7
   # openvpn
-  apt_key: state=present keyserver=keyserver.ubuntu.com id=8E6DA8B4E158C569
+  apt_key: state=present keyserver=pgpkeys.mit.edu id=8E6DA8B4E158C569
   # knot-dns
-  apt_key: state=present keyserver=keyserver.ubuntu.com id=AC0E47584A7A714D
+  apt_key: state=present keyserver=pgpkeys.mit.edu id=AC0E47584A7A714D
+  # nginx
+  apt_key: state=present keyserver=pgpkeys.mit.edu id=ABF5BD827BD9BF62
   # newrelic
-  apt_key: state=present keyserver=keyserver.ubuntu.com id=548C16BF
+  apt_key: state=present keyserver=pgpkeys.mit.edu id=548C16BF

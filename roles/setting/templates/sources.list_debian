@@ -14,5 +14,8 @@ deb https://oss-binaries.phusionpassenger.com/apt/passenger wheezy main
 deb http://swupdate.openvpn.net/apt wheezy main
 # knot-dns
 deb http://deb.knot-dns.cz/debian/ jessie main
+# nginx
+deb http://nginx.org/packages/debian/ jessie nginx
+deb-src http://nginx.org/packages/debian/ jessie nginx
 # newrelic
 deb http://apt.newrelic.com/debian/ newrelic non-free
