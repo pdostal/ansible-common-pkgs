@@ -1,7 +1,7 @@
 - name: Paste sources.list
   when: ansible_distribution == 'Debian'
   template: src=sources.list dest=/etc/apt/sources.list
-  
+
 - name: Add GPG for passenger
   when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=561F9B9CAC40B2F7

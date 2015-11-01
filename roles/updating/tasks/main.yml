@@ -1,13 +1,13 @@
-- name: Update repositories
+- name: Update repositories (Debian)
   when: ansible_os_family == 'Debian'
   apt: update_cache=yes
-- name: Update repositories
+- name: Update repositories (FreeBSD)
   when: ansible_os_family == 'FreeBSD'
   shell: pkg update
 
-- name: Upgrade all packages
+- name: Upgrade all packages (Debian)
   when: ansible_os_family == 'Debian'
   apt: upgrade=dist force=yes
-- name: Upgrade all packages
+- name: Upgrade all packages (FreeBSD)
   when: ansible_os_family == 'FreeBSD'
   shell: pkg upgrade -y
