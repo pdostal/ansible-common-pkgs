@@ -1,15 +1,19 @@
 - name: Paste sources.list
   when: ansible_distribution == 'Debian'
-  template: src=sources.list_debian dest=/etc/apt/sources.list
-- name: Add GPG keys
+  template: src=sources.list dest=/etc/apt/sources.list
+  
+- name: Add GPG for passenger
   when: ansible_distribution == 'Debian'
-  # phusionpassenger
   apt_key: state=present keyserver=pgpkeys.mit.edu id=561F9B9CAC40B2F7
-  # openvpn
+- name: Add GPG for openvpn
+  when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=8E6DA8B4E158C569
-  # knot-dns
+- name: Add GPG for knot
+  when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=AC0E47584A7A714D
-  # nginx
+- name: Add GPG for nginx
+  when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=ABF5BD827BD9BF62
-  # newrelic
+- name: Add GPG for new relic
+  when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=548C16BF

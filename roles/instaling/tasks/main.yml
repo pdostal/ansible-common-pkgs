@@ -1,3 +1,8 @@
+- name: Clone /root/bin
+  git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
+- name: Linking /root/bin
+  lineinfile: dest=/root/.bashrc regexp=~/bin line="export PATH=~/bin:$PATH" create=yes
+
 - name: Install base packages (Debian)
   when: ansible_distribution == 'Debian'
   apt: name={{ item }} state=latest
@@ -14,19 +19,6 @@
   - htop
   - zip
   - unzip
-- name: Install base packages (CentOS)
-  when: ansible_distribution == 'CentOS'
-  yum: name={{ item }} state=latest
-  with_items:
-  - traceroute
-  - curl
-  - gpg
-  - vim
-  - git
-  - mutt
-  - gcc
-  - htop
-  - mosh
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
@@ -42,7 +34,3 @@
   - base64
   - mosh
   - mutt
-- name: Clone /root/bin
-  git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
-- name: Linking /root/bin
-  lineinfile: dest=/root/.bashrc regexp=~/bin line="export PATH=~/bin:$PATH" create=yes

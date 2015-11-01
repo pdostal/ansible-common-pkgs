@@ -1,19 +1,13 @@
-- name: Update repositories [Debian]
+- name: Update repositories
   when: ansible_os_family == 'Debian'
   apt: update_cache=yes
-- name: Update repositories [RedHat]
-  when: ansible_os_family == 'RedHat'
-  shell: yum update -y
-- name: Update repositories [FreeBSD]
+- name: Update repositories
   when: ansible_os_family == 'FreeBSD'
   shell: pkg update
 
-- name: Upgrade all packages [Debian]
+- name: Upgrade all packages
   when: ansible_os_family == 'Debian'
   apt: upgrade=dist force=yes
-- name: Upgrade all packages [RedHat]
-  when: ansible_os_family == 'RedHat'
-  yum: name=* state=latest
-- name: Upgrade all packages [FreeBSD]
+- name: Upgrade all packages
   when: ansible_os_family == 'FreeBSD'
   shell: pkg upgrade -y
