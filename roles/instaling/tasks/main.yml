@@ -9,6 +9,8 @@
   - gpgv
   - vim
   - git
+  - make
+  - gcc
   - mosh
   - mutt
   - htop
@@ -30,6 +32,8 @@
   - base64
   - mosh
   - mutt
+  - zip
+  - unzip
 
 - name: Clone /root/bin
   git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
