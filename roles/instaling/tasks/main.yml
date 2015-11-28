@@ -34,6 +34,7 @@
   - mutt
   - zip
   - unzip
+  - bind-tools
 
 - name: Clone /root/bin
   git: repo=https://github.com/pdostal/server-scripts.git dest=/root/bin
