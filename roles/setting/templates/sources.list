@@ -15,7 +15,7 @@ deb http://debmon.org/debmon debmon-jessie main
 deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
 
 # openvpn
-#deb http://swupdate.openvpn.net/apt wheezy main
+deb http://swupdate.openvpn.net/apt wheezy main
 # knot-dns
 deb http://deb.knot-dns.cz/debian/ jessie main
 # nginx
