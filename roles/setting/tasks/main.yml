@@ -1,3 +1,7 @@
+- name: Install HTTPS module
+  when: ansible_distribution == 'Debian'
+  apt: name=apt-transport-https state=latest
+
 - name: Paste sources.list
   when: ansible_distribution == 'Debian'
   template: src=sources.list dest=/etc/apt/sources.list
