@@ -1,24 +1,22 @@
 # standard
-deb http://ftp.sh.cvut.cz/debian jessie main
-deb http://ftp.sh.cvut.cz/debian jessie-updates main
+deb https://ftp.sh.cvut.cz/debian jessie main
+deb https://ftp.sh.cvut.cz/debian jessie-updates main
 
 # backports
-deb http://ftp.sh.cvut.cz/debian jessie-backports main
+deb https://ftp.sh.cvut.cz/debian jessie-backports main
 
 # security
 deb http://security.debian.org/ jessie/updates main
 
-# icinga
-deb http://debmon.org/debmon debmon-jessie main
-
-# phusion passenger
-deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
-
 # openvpn
-deb http://swupdate.openvpn.net/apt wheezy main
+deb https://swupdate.openvpn.net/apt wheezy main
 # knot-dns
-deb http://deb.knot-dns.cz/debian/ jessie main
+deb https://deb.knot-dns.cz/debian/ jessie main
 # nginx
 deb http://nginx.org/packages/debian/ jessie nginx
+# phusion passenger
+deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
+# icinga
+deb http://debmon.org/debmon debmon-jessie main
 # newrelic
-deb http://apt.newrelic.com/debian/ newrelic non-free
+deb https://apt.newrelic.com/debian/ newrelic non-free
