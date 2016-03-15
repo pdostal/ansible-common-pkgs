@@ -1,10 +1,21 @@
+- set_fact:
+    subdistro: debian
+  when: ansible_architecture == 'x86_64'
+- set_fact:
+    subdistro: raspbian
+  when: ansible_architecture == 'armv6l' or ansible_architecture == 'armv7l'
+
+- name: Set locales properly
+  when: ansible_distribution == 'Debian'
+  template: src=environment dest=/etc/environment
+
 - name: Install HTTPS module
   when: ansible_distribution == 'Debian'
   apt: name=apt-transport-https state=latest
 
 - name: Paste sources.list
   when: ansible_distribution == 'Debian'
-  template: src=sources.list dest=/etc/apt/sources.list
+  template: src={{ subdistro }}.list dest=/etc/apt/sources.list
 
 - name: Add GPG for passenger
   when: ansible_distribution == 'Debian'

@@ -1,0 +1,7 @@
+deb http://mirrordirector.raspbian.org/raspbian jessie main contrib non-free firmware
+deb http://archive.raspberrypi.org/debian jessie main
+
+deb http://raspbian-backports.sourceforge.net backports/
+deb http://node-arm.herokuapp.com/ /
+deb http://apt.adafruit.com/raspbian/ wheezy main
+
