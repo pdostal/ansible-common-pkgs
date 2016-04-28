@@ -20,3 +20,5 @@ deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
 deb http://debmon.org/debmon debmon-jessie main
 # newrelic
 deb https://apt.newrelic.com/debian/ newrelic non-free
+# mongodb
+deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main
