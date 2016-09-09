@@ -13,7 +13,9 @@ deb https://swupdate.openvpn.net/apt wheezy main
 # knot-dns
 deb https://deb.knot-dns.cz/debian/ jessie main
 # nginx
-deb http://nginx.org/packages/debian/ jessie nginx
+deb http://nginx.org/packages/debian/ wheezy nginx
+# php
+deb https://packages.sury.org/php/ jessie main
 # phusion passenger
 deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
 # icinga
