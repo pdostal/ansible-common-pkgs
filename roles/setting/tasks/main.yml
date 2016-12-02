@@ -34,7 +34,7 @@
   apt_key: state=present keyserver=pgpkeys.mit.edu id=AC0E47584A7A714D
 - name: Add GPG for nginx
   when: ansible_distribution == 'Debian'
-  apt_key: state=present keyserver=pgpkeys.mit.edu id=1471427554
+  apt_key: state=present url="https://nginx.org/keys/nginx_signing.key" validate_certs=no
 - name: Add GPG for new relic
   when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pgpkeys.mit.edu id=548C16BF
