@@ -3,6 +3,7 @@
   apt: name={{ item }} state=latest
   with_items:
   - apt-transport-https
+  - rsync
   - traceroute
   - fping
   - curl
@@ -16,13 +17,14 @@
   - htop
   - zip
   - unzip
-  
+
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
   pkgng: name={{ item }} state=present
   with_items:
   - bash
   - python
+  - rsync
   - traceroute
   - fping
   - curl
