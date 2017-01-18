@@ -11,22 +11,22 @@ deb http://security.debian.org/ jessie/updates main
 # openvpn
 deb https://swupdate.openvpn.net/apt wheezy main
 # knot-dns
-deb https://deb.knot-dns.cz/debian/ jessie main
+deb https://deb.knot-dns.cz/knot/ jessie main
 # nginx
 deb http://nginx.org/packages/debian/ wheezy nginx
 # php
 deb https://packages.sury.org/php/ jessie main
 # phusion passenger
-deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
+#deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
 # icinga
-deb http://debmon.org/debmon debmon-jessie main
+#deb http://debmon.org/debmon debmon-jessie main
 # newrelic
-deb https://apt.newrelic.com/debian/ newrelic non-free
+#deb https://apt.newrelic.com/debian/ newrelic non-free
 # mongodb
 deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main
 # docker
 deb https://apt.dockerproject.org/repo debian-jessie main
 # chaosvpn
-deb http://debian.sdinet.de/ wheezy chaosvpn
+#deb http://debian.sdinet.de/ wheezy chaosvpn
 # tor
 deb http://deb.torproject.org/torproject.org wheezy main
