@@ -2,7 +2,7 @@
   when: ansible_distribution == 'Debian'
   apt: name={{ item }} state=latest
   with_items:
-  - apt-transport-https
+  - aptitude
   - rsync
   - traceroute
   - fping
