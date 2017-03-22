@@ -1,4 +1,4 @@
-# Ansible : pkgs
+# Ansible : Common : Pkgs
 
-Upgrade & install basics stuff
+Ansible common playbook for globally used packages
 

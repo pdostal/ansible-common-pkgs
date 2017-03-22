@@ -1,0 +1,12 @@
+- name: Detect Debian x86_64
+  set_fact:
+    subdistro: debian
+  when: ansible_architecture == 'x86_64'
+- name: Detect Debian ARMv6l
+  set_fact:
+    subdistro: raspbian
+  when: ansible_architecture == 'armv6l' or ansible_architecture == 'armv7l'
+
+- name: Paste sources.list
+  when: ansible_distribution == 'Debian'
+  template: src={{ subdistro }}.list dest=/etc/apt/sources.list
