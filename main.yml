@@ -1,9 +1,10 @@
 - name: pkgs
   hosts: all
-  sudo: true
+  become: true
   roles:
   - setting
   - sources
   - keychain
   - updating
+  - autoupgrade
   - Instaling

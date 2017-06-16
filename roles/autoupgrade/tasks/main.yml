@@ -1,0 +1,16 @@
+- name: Install autoupgrade dependencies
+  when: ansible_distribution == 'Debian'
+  apt: name={{ item }} state=latest
+  with_items:
+  - unattended-upgrades
+  - apt-listchanges
+
+- name: Place 20auto-upgrades file
+  when: ansible_distribution == 'Debian'
+  template: src=20auto-upgrades dest=/etc/apt/apt.conf.d/20auto-upgrades
+- name: Place 02periodic file
+  when: ansible_distribution == 'Debian'
+  template: src=02periodic dest=/etc/apt/apt.conf.d/02periodic
+- name: Place 50unattended-upgrades file
+  when: ansible_distribution == 'Debian'
+  template: src=50unattended-upgrades dest=/etc/apt/apt.conf.d/50unattended-upgrades
