@@ -1,10 +1,16 @@
-- name: pkgs
+- name: PKGS Everyone
   hosts: all
   become: true
   roles:
   - setting
-  - sources
-  - keychain
   - updating
   - autoupgrade
+
+- name: PKGS PDostal
+  hosts: pdostal
+  become: true
+  roles:
+  - sources
+  - keychain
   - Instaling
+
