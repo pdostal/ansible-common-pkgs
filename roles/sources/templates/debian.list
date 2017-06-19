@@ -1,32 +1,32 @@
 # standard
-deb https://ftp.sh.cvut.cz/debian jessie main
-deb https://ftp.sh.cvut.cz/debian jessie-updates main
+deb https://ftp.sh.cvut.cz/debian stretch main
+deb https://ftp.sh.cvut.cz/debian stretch-updates main
 
 # backports
-deb https://ftp.sh.cvut.cz/debian jessie-backports main
+deb https://ftp.sh.cvut.cz/debian stretch-backports main
 
 # security
-deb http://security.debian.org/ jessie/updates main
+deb http://security.debian.org/ stretch/updates main
 
 # openvpn
-deb https://swupdate.openvpn.net/apt wheezy main
+#deb https://swupdate.openvpn.net/apt jessie main
 # knot-dns
-deb https://deb.knot-dns.cz/knot/ jessie main
+deb https://deb.knot-dns.cz/knot/ stretch main
 # nginx
-deb http://nginx.org/packages/debian/ wheezy nginx
+deb http://nginx.org/packages/debian/ stretch nginx
 # php
-deb https://packages.sury.org/php/ jessie main
+deb https://packages.sury.org/php/ stretch main
 # phusion passenger
 #deb https://oss-binaries.phusionpassenger.com/apt/passenger jessie main
-# icinga
-#deb http://debmon.org/debmon debmon-jessie main
+# debmon
+#deb http://debmon.org/debmon debmon-stretch main
 # newrelic
 #deb https://apt.newrelic.com/debian/ newrelic non-free
 # mongodb
-deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main
+##deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.2 main
 # docker
-deb https://apt.dockerproject.org/repo debian-jessie main
+deb https://apt.dockerproject.org/repo debian-stretch main
 # chaosvpn
-#deb http://debian.sdinet.de/ wheezy chaosvpn
+deb http://debian.sdinet.de/ stretch chaosvpn
 # tor
-deb http://deb.torproject.org/torproject.org wheezy main
+deb http://deb.torproject.org/torproject.org stretch main

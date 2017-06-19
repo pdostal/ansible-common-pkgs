@@ -4,9 +4,9 @@
 - name: Add GPG for adafruit
   when: ansible_distribution == 'Debian'
   apt_key: state=present url=https://apt.adafruit.com/apt.adafruit.com.gpg.key
-# - name: Add GPG for passenger
-#   when: ansible_distribution == 'Debian'
-#   apt_key: state=present keyserver=pool.sks-keyservers.net id=561F9B9CAC40B2F7
+- name: Add GPG for passenger
+  when: ansible_distribution == 'Debian'
+  apt_key: state=present keyserver=pool.sks-keyservers.net id=561F9B9CAC40B2F7
 - name: Add GPG for openvpn
   when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=pool.sks-keyservers.net id=8E6DA8B4E158C569
@@ -16,9 +16,9 @@
 - name: Add GPG for nginx
   when: ansible_distribution == 'Debian'
   apt_key: state=present url="https://nginx.org/keys/nginx_signing.key" validate_certs=no
-# - name: Add GPG for new relic
-#   when: ansible_distribution == 'Debian'
-#   apt_key: state=present keyserver=pool.sks-keyservers.net id=548C16BF
+- name: Add GPG for new relic
+  when: ansible_distribution == 'Debian'
+  apt_key: state=present keyserver=pool.sks-keyservers.net id=548C16BF
 - name: Add GPG for mongodb
   when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=keyserver.ubuntu.com id=EA312927
@@ -28,3 +28,12 @@
 - name: Add GPG for Tor
   when: ansible_distribution == 'Debian'
   apt_key: state=present keyserver=keys.gnupg.net id=886DDD89
+- name: Add GPG for debian
+  when: ansible_distribution == 'Debian'
+  apt_key: state=present keyserver=p80.pool.sks-keyservers.net id=EF0F382A1A7B6500
+- name: Add GPG for ChaosVPN
+  when: ansible_distribution == 'Debian'
+  apt_key: state=present keyserver=p80.pool.sks-keyservers.net id=157614093BD8041F
+- name: Add GPG for debmon
+  when: ansible_distribution == 'Debian'
+  apt_key: state=present keyserver=p80.pool.sks-keyservers.net id=DC0EE15A29D662D2
