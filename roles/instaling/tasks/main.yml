@@ -17,6 +17,7 @@
   - htop
   - zip
   - unzip
+  - telnet
 
 - name: Install base packages (FreeBSD)
   when: ansible_distribution == 'FreeBSD'
